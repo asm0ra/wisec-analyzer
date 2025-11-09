@@ -43,7 +43,7 @@ Main features:
 # 1) Install system packages
 sudo apt install python3 python3-venv python3-pip git -y
 # or on Arch Linux:
-# sudo pacman -S python python-pip git
+sudo pacman -S python python-pip git
 
 # 2) Clone the repository
 git clone https://github.com/asm0ra/wisec-analyzer.git
