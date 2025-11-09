@@ -155,7 +155,7 @@ You are free to use, modify, and distribute this software with proper attributio
 
 ## 9. Author
 
-**Abzal Gabdullin (asm0ra)**  
+**Abzal Gabdullin**  
 Master’s Program in Information Security Systems  
 L.N. Gumilyov Eurasian National University, Astana  
 Email: anchorite.exe@gmail.com  
