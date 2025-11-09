@@ -24,49 +24,61 @@ Main features:
 
 ## 2. System Requirements
 
-- **Python ≥ 3.9**  
-- Packages: `scapy`, `click`, `pandas` (installed automatically).  
-- Tested on:
-  - **Linux**: Arch Linux, Ubuntu 22+, Fedora 40+  
-  - **Windows 10/11**
-
----
+- **Python ≥ 3.10**
+- **Dependencies (installed automatically):**
+  - scapy
+  - pyshark
+  - matplotlib
+  - pandas
+  - click
+- **Tested environments:**
+  - Linux — Arch Linux, Ubuntu 22+, Fedora 40+
+  - Windows 10 / 11
 
 ## 3. Installation Instructions
 
 ### 3.1 Linux / macOS
 
 ```bash
-# Clone the repository
+# 1) Install system packages
+sudo apt install python3 python3-venv python3-pip git -y
+# or on Arch Linux:
+# sudo pacman -S python python-pip git
+
+# 2) Clone the repository
 git clone https://github.com/asm0ra/wisec-analyzer.git
 cd wisec-analyzer
 
-# Create and activate a virtual environment
+# 3) Create and activate a virtual environment
 python -m venv venv
 source venv/bin/activate
 
-# Install in editable (development) mode
+# 4) Install WiSecAnalyzer inside the environment
 pip install -e .
 
-# Verify installation
+# 5) Verify installation
 wisec-analyzer --help
 ```
 
 ### 3.2 Windows (PowerShell)
 
 ```powershell
-# Clone the repository
+# 1) Install prerequisites
+#    - Python 3.10+ (check "Add Python to PATH" during installation)
+#    - Git for Windows
+
+# 2) Clone the repository
 git clone https://github.com/asm0ra/wisec-analyzer.git
 cd wisec-analyzer
 
-# Create and activate virtual environment
+# 3) Create and activate a virtual environment
 python -m venv venv
 .\venv\Scripts\activate
 
-# Install package
+# 4) Install WiSecAnalyzer
 pip install -e .
 
-# Verify
+# 5) Verify installation
 wisec-analyzer --help
 ```
 
@@ -81,18 +93,19 @@ If the command is not found after installation, ensure that
 ### 4.1 Analyze a Single Capture
 
 ```bash
-wisec-analyzer analyze path/to/capture.pcap
+wisec-analyzer analyze -i path/to/capture.pcap
 ```
 
 Output files in the current directory:
 
 - `capture_report.txt` – textual summary  
 - `capture_bins.csv` – statistical data
+- `capture_plot.png` – activity timeline visualization
 
 ### 4.2 Batch Analysis of a Directory
 
 ```bash
-wisec-analyzer batch ./captures/
+wisec-analyzer batch -d ./captures/
 ```
 
 Results are saved in the subfolder `out_<directory_name>`.
