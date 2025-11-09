@@ -1,0 +1,2 @@
+[console_scripts]
+wisec-analyzer = wisec_analyzer.cli:main

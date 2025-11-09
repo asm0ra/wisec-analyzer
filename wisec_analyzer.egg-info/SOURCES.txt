@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+wisec_analyzer/__init__.py
+wisec_analyzer/cli.py
+wisec_analyzer/core.py
+wisec_analyzer/models.py
+wisec_analyzer/reporting.py
+wisec_analyzer.egg-info/PKG-INFO
+wisec_analyzer.egg-info/SOURCES.txt
+wisec_analyzer.egg-info/dependency_links.txt
+wisec_analyzer.egg-info/entry_points.txt
+wisec_analyzer.egg-info/requires.txt
+wisec_analyzer.egg-info/top_level.txt

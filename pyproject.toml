@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wisec-analyzer"
+version = "0.1.0"
+description = "WiSecAnalyzer: offline Wi-Fi PCAP analyzer for deauth/DoS and handshake activity (WPA2/WPA3)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Abzal Gabdullin" }
+]
+keywords = ["wifi", "security", "wpa2", "wpa3", "pcap", "wireless", "analysis"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Security",
+  "Topic :: Internet :: Log Analysis",
+]
+dependencies = [
+  "scapy>=2.5.0",
+  "pandas>=2.0.0",
+  "matplotlib>=3.7.0",
+  "click>=8.1.0",
+  "tqdm>=4.60.0",
+]
+
+[project.scripts]
+wisec-analyzer = "wisec_analyzer.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/YOUR_USERNAME/wisec-analyzer"
+Issues = "https://github.com/YOUR_USERNAME/wisec-analyzer/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["wisec_analyzer*"]
+exclude = ["out_4sics*", "dist*", "build*"]
+
